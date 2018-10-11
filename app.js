@@ -42,7 +42,7 @@ app.post('/shorten',function(req,res){
 
 var regex = /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9]\.[^\s]{2,})/
   if(!regex.test(originalUrl)) {
-    res.render('error',{message:'not a valid url'})
+    res.render('error',{message:'Enter a valid url'})
   } else {
     //passing the originalurl to encoder to get the shorten url;
     var shortenUrl=encoder(originalUrl);
